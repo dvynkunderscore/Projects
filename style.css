@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+html,body{
+    height:100%;
+    width:100%;
+    
+}
+#cursor{
+    height:10px;
+    width:10px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    color: #95C11E;
+}
+#nav{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    margin: 0px 0px;
+    padding: 25px 120px;
+    gap: 50px;
+    justify-content: flex-start;
+    color: beige;
+    font-weight: 100;
+    position: fixed;
+    z-index: 99;
+}
+#nav img{
+    height: 75px;
+}
+video{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0,0,0,0.35);
+}
+#page1{
+    height:100vh;
+    width:100%;
+    position: relative;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#page1 h1{
+    font-size: 125px;
+    font-weight: 900;
+    position: relative;
+    
+}
+#page1 h1::before{
+    content:"EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top:-5px;
+    left:-5px;
+    -webkit-text-stroke: 1px #95C11E;
+    z-index: -1;
+}
+#page1 h2{
+    font-size: 35px;
+    font-weight: 800;
+}
+#page1 h5{
+    font-size: 15px;
+   
+}
+#page2{
+    min-height:100vh;
+    width:100%;
+}
+#scroller{
+    white-space: nowrap;
+    background-color: transparent;
+    overflow-x:auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scrollerin1{
+    white-space: nowrap;
+    display: inline-block ;
+    animation: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scrollerin2{
+    white-space: nowrap;
+    display: inline-block;
+    animation: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+#scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    -webkit-text-stroke: 2px white;
+    transition: color 0.75s;
+}
+#scroller h4:hover{
+    color: #95C11E;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#aboutus{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    gap: 100px;
+    padding: 150px 25px;
+}
+#aboutus img{
+    align-items: center;
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#aboutusdes{
+    text-align: center;
+}
+#aboutusdes h3{
+    color: aliceblue;
+    font-size:45px;
+    font-weight: 900;
+}
+#aboutusdes h4{
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 25px; ;
+}
+#cardcon{
+    height:60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    z-index: 10;
+}
+.card{
+    height: 85%;
+    width: 25%;
+    /* background-color: red; */
+    /* padding: 0px 20px; */
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center; 
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+#card1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&w=1152&ssl=1);
+
+}
+#card2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&w=1152&ssl=1);
+}
+.overlay{
+    height:100%;
+    width:100%;
+    background-color: #95C11E;
+    padding: 20px;
+    opacity: 0;  
+    transition: all ease 0.5s;  
+
+}
+.overlay h4{
+    color: #000;
+    text-transform: uppercase;
+    padding: 50px 20px;
+    font-size: 30px;
+    font-weight: 900;
+    /* white-space: nowrap; */
+    margin-bottom: 15px;
+}
+.overlay p{
+    color: #000;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(-1,1,0,15deg);
+}
+#greenstrip{
+    margin-top: 70px;
+    height: 25vh;
+    background-color: #95C11E;
+    background: linear-gradient(to left bottom, yellow, green);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#greenstrip h4{
+    font-weight: 900;
+    font-size: 30px;
+}
+#page3{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page3>p{
+    font-size: 30px;
+    font-weight: 800;
+    color: aliceblue;
+    width: 40%;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#page3 img{
+    position: absolute;
+    height: 50px;
+}
+#page3 #c1{
+    left:25%;
+    top:20%;
+}
+#page3 #c2{
+    right:25%;
+    top: 68%;
+}
+#page4{
+    height:30vh;
+    width:100%;
+    /* background-color: beige;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.el{
+    height:70%;
+    width:25%;
+    overflow: hidden;
+    position: relative;
+}
+.el h4{
+    height:100%;
+    width:100%;
+    background-color: #95C11E;
+    display: flex;
+    color: #000;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 800;
+    border-radius: 15px;
+    position: absolute;
+    z-index: 10;
+    transition: all ease 0.5s;
+}
+.el img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 15px;
+    scale: 1;
+    transition: all ease 0.3s;
+}
+.el:hover h4{
+    color: aliceblue;
+    background-color: transparent;
+}
+.el:hover img{
+    scale: 0.98;
+}
+#page4 h1{
+    font-size: 75px;
+    font-weight: 800;
+    position: absolute;
+    color: black    ;
+    top:79.1%;
+    -webkit-text-stroke: 2px white;
+}
+#footer{
+    height:60vh;
+    width:100%;
+    background: linear-gradient(to left bottom, green,yellow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer f1 img{
+    height: 50px;
+}
+#footer f2{
+    font-weight: 800;
+}
